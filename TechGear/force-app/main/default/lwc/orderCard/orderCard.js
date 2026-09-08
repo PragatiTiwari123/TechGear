@@ -13,7 +13,7 @@ const columns = [
     },
     {
         label : "Warranty Status",
-        fieldName : "warrantyStatus"
+        fieldName : "Warranty_Status__c"
     }
 ]
 export default class OrderCard extends LightningElement {
@@ -33,11 +33,11 @@ export default class OrderCard extends LightningElement {
             // console.log('<----data---->', data);
             // console.log('<----Warranty End Date---->', this.warrantyEndDate);
 
-            const enriched = data.map(record => {
+            /*const enriched = data.map(record => {
                 return { ...record, warrantyStatus: new Date(record.Warranty_End_Date__c).getMonth - new Date().getMonth() <= 0 ? 'Expired' : 'Active' };
             });
             this.data = enriched;
-            console.log('<----data---->', this.data);
+            console.log('<----data---->', this.data);*/
         }
 
         if (error) {
